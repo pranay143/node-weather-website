@@ -6,6 +6,7 @@ const geoCode = require('./utils/geoCode')
 const getForecastData = require('./utils/forecast')
 
 const app = express();
+const port = process.env.PORT || 7000
 
 //Define paths for express config
 const directory = path.join(__dirname, '../public');
@@ -78,6 +79,6 @@ app.get('/*', (req, res) => {
     })
 })
 
-app.listen(7000, () => {
-    console.log('Server connected')
+app.listen(port, () => {
+    console.log('Server started')
 })

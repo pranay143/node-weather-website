@@ -9,8 +9,8 @@ weatherForecast.addEventListener('submit', (event) => {
     
     p1.textContent = 'Loading...'
     p2.textContent = ''
-
-    fetch('http://localhost:7000/weather?state='+searchElement.value).then((responce) => {
+//http://localhost:7000
+    fetch('/weather?state='+searchElement.value).then((responce) => {
     responce.json().then((data) => {
         if(data.error) {
             //console.log(data.error)
