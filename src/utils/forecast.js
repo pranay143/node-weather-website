@@ -9,7 +9,8 @@ debugger
         } else if(body.error) {
             callback('Unable to find the location please try again', undefined)
         } else {
-            callback(undefined, 'Temperature: '+body.current.temperature+' degrees and weather is '+ body.current.weather_descriptions[0])
+            console.log(body)
+            callback(undefined, 'Temperature: '+body.current.temperature+' degrees and weather is '+ body.current.weather_descriptions[0]+' and humidity is '+ body.current.humidity)
         }
     })
 }
